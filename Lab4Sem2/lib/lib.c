@@ -26,7 +26,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
     }
 
     int index = atoi(strtok_r(line, ":", &line));
-    char *question = strtok_r(NULL, ":", &line);
+    const char *question = strtok_r(NULL, ":", &line);
     int yesIndex = atoi(strtok_r(NULL, ":", &line));
     int noIndex = atoi(strtok_r(NULL, ":", &line));
     current->question = strdup(question);
@@ -38,7 +38,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         fseek(file, 0, SEEK_SET);
         for (i = 1;;i++) {
             fgets(line, sizeof(line), file);
-            char *p = strtok_r(line, ":", &line);
+            const char *p = strtok_r(line, ":", &line);
             if (yesIndex == atoi(p))
                 break;
         }
@@ -51,7 +51,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         fseek(file, 0, SEEK_SET);
         for (i = 1;;i++) {
             fgets(line, sizeof(line), file);
-            char* p = strtok_r(line, ":", &line);
+            const char* p = strtok_r(line, ":", &line);
             if(noIndex == atoi(p))
                 break;
         }
