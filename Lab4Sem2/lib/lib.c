@@ -6,6 +6,9 @@
 int max = 0;
 
 Node *createNode(const char *question, int index) {
+    if (question == NULL) {
+        return NULL;
+    }
     Node *node = (Node *) malloc(sizeof(Node));
     node->question = strdup(question);
     node->yes = NULL;
@@ -13,6 +16,7 @@ Node *createNode(const char *question, int index) {
     node->index = index;
     return node;
 }
+
 
 
 void readTreeFromFileHelper(Node* current, FILE* file, int count) {
@@ -57,6 +61,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         }
         readTreeFromFileHelper(noNode, file, i);
     }
+    free(line);
 }
 
 
