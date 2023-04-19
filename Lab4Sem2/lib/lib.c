@@ -113,24 +113,24 @@ char* inputStr() {
 void guessObject(Node* node, FILE* logFile, char* username) {
     char answer[MAX_LINE_LENGTH];
     time_t t = time(NULL);
-    const struct tm* tm = localtime_r(&t);
-    fprintf(logFile, "[%04d-%02d-%02d %02d:%02d:%02d] User %s: Question: %s\n",
-            tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-            tm->tm_hour, tm->tm_min, tm->tm_sec,
-            username, node->question);
+    struct tm tm;
+    localtime_r(&t, &tm);
+    char time_string[MAX_LINE_LENGTH];
+    strftime(time_string, MAX_LINE_LENGTH, "[%Y-%m-%d %H:%M:%S]", &tm);
+    fprintf(logFile, "%s User %s: Question: %s\n",
+            time_string, username, node->question);
     printf("%s\n", node->question);
     fgets(answer, MAX_LINE_LENGTH, stdin);
     answer[strlen(answer) - 1] = '\0';
 
-    fprintf(logFile, "[%04d-%02d-%02d %02d:%02d:%02d] User %s: Answer: %s\n",
-            tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-            tm->tm_hour, tm->tm_min, tm->tm_sec,
-            username, answer);
+    strftime(time_string, MAX_LINE_LENGTH, "[%Y-%m-%d %H:%M:%S]", &tm);
+    fprintf(logFile, "%s User %s: Answer: %s\n",
+            time_string, username, answer);
     if (strcmp(answer, "yes") == 0) {
         if (node->yes == NULL) {
             printf("I guessed your object!\n");
         } else {
-            guessObject(node->yes, logFile,username);
+            guessObject(node->yes, logFile, username);
         }
     } else if (strcmp(answer, "no") == 0) {
         if (node->no == NULL) {
@@ -146,18 +146,18 @@ void guessObject(Node* node, FILE* logFile, char* username) {
             node->yes = createNode(object, ++max);
             free(node->question);
             node->question = strdup(question);
-            fprintf(logFile, "[%04d-%02d-%02d %02d:%02d:%02d] User %s: New question: %s, New object: %s\n",
-                    tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
-                    tm->tm_hour, tm->tm_min, tm->tm_sec,
-                    username, question, object);
+            strftime(time_string, MAX_LINE_LENGTH, "[%Y-%m-%d %H:%M:%S]", &tm);
+            fprintf(logFile, "%s User %s: New question: %s, New object: %s\n",
+                    time_string, username, question, object);
         } else {
-            guessObject(node->no, logFile,username);
+            guessObject(node->no, logFile, username);
         }
     } else {
         printf("Please answer 'yes' or 'no'.\n");
-        guessObject(node, logFile,username);
+        guessObject(node, logFile, username);
     }
 }
+
 
 
 
