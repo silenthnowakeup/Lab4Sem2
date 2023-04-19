@@ -55,7 +55,9 @@ int main() {
             printf("Enter filename to save to: ");
             char filename[MAX_LINE_LENGTH];
             fgets(filename, MAX_LINE_LENGTH, stdin);
+            if (strlen(filename) > 0) {
             filename[strlen(filename) - 1] = '\0';
+            }
 
             FILE *file = fopen(filename, "w");
             saveTree(root, file);
