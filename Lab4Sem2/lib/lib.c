@@ -17,7 +17,7 @@ Node *createNode(const char *question, int index) {
 
 void readTreeFromFileHelper(Node* current, FILE* file, int count) {
     max++;
-    char line[SIZE];
+    char* line = (char*)malloc(SIZE*sizeof(char));
     fseek(file, 0, SEEK_SET);
     while(count--) {
         fgets(line, sizeof(line), file);
