@@ -1,0 +1,8 @@
+D:/Lab4Sem2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Lab4Sem2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Lab4Sem2/cmake-build-debug/lib/CMakeFiles/lib.dir
+D:/Lab4Sem2/cmake-build-debug/lib/CMakeFiles/edit_cache.dir
+D:/Lab4Sem2/cmake-build-debug/lib/CMakeFiles/rebuild_cache.dir
+D:/Lab4Sem2/cmake-build-debug/app/CMakeFiles/Lab4Sem2.dir
+D:/Lab4Sem2/cmake-build-debug/app/CMakeFiles/edit_cache.dir
+D:/Lab4Sem2/cmake-build-debug/app/CMakeFiles/rebuild_cache.dir

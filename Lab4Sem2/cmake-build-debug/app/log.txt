@@ -1,0 +1,56 @@
+[2023-04-19 13:18:20] User sart: Question: It's alive?
+[2023-04-19 13:18:20] User sart: Answer: yes
+[2023-04-19 13:18:22] User sart: Question: does it have 4 legs?
+[2023-04-19 13:18:22] User sart: Answer: yes
+[2023-04-19 13:18:24] User sart: Question: is it a mammal?
+[2023-04-19 13:18:24] User sart: Answer: no
+[2023-04-19 13:18:25] User sart: Question: Have a shell?
+[2023-04-19 13:18:25] User sart: Answer: yes
+[2023-04-19 13:18:28] User sart: Question: Turtle?
+[2023-04-19 13:18:28] User sart: Answer: yes
+[2023-04-19 13:23:12] User hello: Question: It's alive?
+[2023-04-19 13:23:12] User hello: Answer: no
+[2023-04-19 13:23:13] User hello: Question: is it edible?
+[2023-04-19 13:23:13] User hello: Answer: no
+[2023-04-19 13:23:16] User hello: Question: Is it man made?
+[2023-04-19 13:23:16] User hello: Answer: no
+[2023-04-19 13:23:18] User hello: Question: is this a natural phenomenon?
+[2023-04-19 13:23:18] User hello: Answer: yes
+[2023-04-19 13:23:21] User hello: Question: Rain?
+[2023-04-19 13:23:21] User hello: Answer: no
+[2023-04-19 13:23:21] User hello: New question: Is there a thunder?, New object: Thunderstorm
+[2023-04-19 13:25:12] User hello: Question: It's alive?
+[2023-04-19 13:25:12] User hello: Answer: no
+[2023-04-19 13:25:14] User hello: Question: is it edible?
+[2023-04-19 13:25:14] User hello: Answer: no
+[2023-04-19 13:25:15] User hello: Question: Is it man made?
+[2023-04-19 13:25:15] User hello: Answer: no
+[2023-04-19 13:25:16] User hello: Question: is this a natural phenomenon?
+[2023-04-19 13:25:16] User hello: Answer: yes
+[2023-04-19 13:25:18] User hello: Question: Is there a thunder?
+[2023-04-19 13:25:18] User hello: Answer: yes
+[2023-04-19 13:25:22] User hello: Question: Thunderstorm
+[2023-04-19 13:25:22] User hello: Answer: yes
+[2023-04-19 13:31:05] User stas: Question: It's alive?
+[2023-04-19 13:31:05] User stas: Answer: yes
+[2023-04-19 13:31:11] User stas: Question: does it have 4 legs?
+[2023-04-19 13:31:11] User stas: Answer: no
+[2023-04-19 13:31:15] User stas: Question: Got wings?
+[2023-04-19 13:31:15] User stas: Answer: no
+[2023-04-19 13:31:17] User stas: Question: Lives in water?
+[2023-04-19 13:31:17] User stas: Answer: no
+[2023-04-19 13:31:19] User stas: Question: Snake?
+[2023-04-19 13:31:19] User stas: Answer: no
+[2023-04-19 13:31:19] User stas: New question: successfully passes labs?, New object: Stas Chernyak
+[2023-04-19 13:32:41] User stas: Question: It's alive?
+[2023-04-19 13:32:41] User stas: Answer: yes
+[2023-04-19 13:32:42] User stas: Question: does it have 4 legs?
+[2023-04-19 13:32:42] User stas: Answer: no
+[2023-04-19 13:32:44] User stas: Question: Got wings?
+[2023-04-19 13:32:44] User stas: Answer: no
+[2023-04-19 13:32:45] User stas: Question: Lives in water?
+[2023-04-19 13:32:45] User stas: Answer: no
+[2023-04-19 13:32:47] User stas: Question: successfully passes labs?
+[2023-04-19 13:32:47] User stas: Answer: yes
+[2023-04-19 13:32:48] User stas: Question: Stas Chernyak
+[2023-04-19 13:32:48] User stas: Answer: yes
