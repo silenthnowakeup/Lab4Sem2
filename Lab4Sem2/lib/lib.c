@@ -25,10 +25,10 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         if (len > 0) line[len] = '\0';
     }
 
-    int index = atoi(strtok(line, ":"));
-    char *question = strtok(NULL, ":");
-    int yesIndex = atoi(strtok(NULL, ":"));
-    int noIndex = atoi(strtok(NULL, ":"));
+    int index = atoi(strtok_r(line, ":"));
+    const char *question = strtok_r(NULL, ":");
+    int yesIndex = atoi(strtok_r(NULL, ":"));
+    int noIndex = atoi(strtok_r(NULL, ":"));
     current->question = strdup(question);
     current->index = index;
     int i;
@@ -38,7 +38,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         fseek(file, 0, SEEK_SET);
         for (i = 1;;i++) {
             fgets(line, sizeof(line), file);
-            char *p = strtok(line, ":");
+            const char *p = strtok_r(line, ":");
             if (yesIndex == atoi(p))
                 break;
         }
@@ -51,7 +51,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         fseek(file, 0, SEEK_SET);
         for (i = 1;;i++) {
             fgets(line, sizeof(line), file);
-            char* p = strtok(line, ":");
+            const char* p = strtok_r(line, ":");
             if(noIndex == atoi(p))
                 break;
         }
@@ -112,7 +112,7 @@ char* inputStr() {
 void guessObject(Node* node, FILE* logFile, char* username) {
     char answer[MAX_LINE_LENGTH];
     time_t t = time(NULL);
-    struct tm* tm = localtime(&t);
+    const struct tm* tm = localtime_r(&t);
     fprintf(logFile, "[%04d-%02d-%02d %02d:%02d:%02d] User %s: Question: %s\n",
             tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
             tm->tm_hour, tm->tm_min, tm->tm_sec,
