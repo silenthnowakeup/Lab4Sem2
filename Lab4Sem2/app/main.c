@@ -45,7 +45,10 @@ int main() {
 
         char answer[MAX_LINE_LENGTH];
         fgets(answer, MAX_LINE_LENGTH, stdin);
+        if (strlen(answer) > 0) {
         answer[strlen(answer) - 1] = '\0';
+        }
+
 
         if (strcmp(answer, "g") == 0) {
             guessObject(root,log,username);
