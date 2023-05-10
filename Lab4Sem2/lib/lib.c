@@ -62,7 +62,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         }
         readTreeFromFileHelper(noNode, file, i);
     }
-    free(line_copy)
+    free(line_copy);
     free(line);
 }
 
