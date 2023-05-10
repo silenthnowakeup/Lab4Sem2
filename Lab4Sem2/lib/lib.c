@@ -29,7 +29,8 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         if (len > 0) line[len] = '\0';
     }
 
-    int index = atoi(strtok_r(line, ":", &line));
+    char* line_copy = strdup(line);
+    int index = atoi(strtok_r(line_copy, ":", &line_copy));
     const char *question = strtok_r(NULL, ":", &line);
     int yesIndex = atoi(strtok_r(NULL, ":", &line));
     int noIndex = atoi(strtok_r(NULL, ":", &line));
@@ -61,6 +62,7 @@ void readTreeFromFileHelper(Node* current, FILE* file, int count) {
         }
         readTreeFromFileHelper(noNode, file, i);
     }
+    free(line_copy)
     free(line);
 }
 
